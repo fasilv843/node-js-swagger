@@ -6,7 +6,7 @@ import connect from './database/conn.js';
 import userRouter from './router/user.js';
 import postRouter from './router/post.js';
 import commentRouter from './router/comment.js';
-
+import swaggerDocs from './swagger.js';
 
 dotenv.config()
 const app = express();
@@ -37,6 +37,7 @@ connect().then(() => {
         app.listen(port, () => {
             console.log(`Server connected to http://localhost:${port}`);
         })
+        swaggerDocs(app, port)
     } catch (error) {
         console.log('Cannot connect to the server')
     }

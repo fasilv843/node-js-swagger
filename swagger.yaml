@@ -2,11 +2,17 @@
 openapi: 3.0.0
 
 info:
-  title: Mini Blog API from swagger.yaml
-  version: 0.1.9
+  title: Mini Blog API Documentation
+  description: API endpoints for a mini blog services documented on swagger
+  contact:
+    name: Fasil Valiyattil
+    email: fasilvaliyattil843@gmail.com
+    url: https://github.com/fasilv843/node-js-swagger
+  version: 1.0.0
 
 servers:
   - url: http://localhost:8080/
+  - url: <live-link-if-available>
 
 paths:
   /api/user/register:
